@@ -1,46 +1,46 @@
 config defaults
-	option input 'ACCEPT'
-	option output 'ACCEPT'
-	option forward 'REJECT'
-	option syn_flood '1'
+  option input 'ACCEPT'
+  option output 'ACCEPT'
+  option forward 'REJECT'
+  option syn_flood '1'
 
 config zone
-	option input 'ACCEPT'
-	option forward 'REJECT'
-	option output 'ACCEPT'
-	option masq '1'
-	option name 'lan'
-	option network 'lan'
+  option input 'ACCEPT'
+  option forward 'REJECT'
+  option output 'ACCEPT'
+  option masq '1'
+  option name 'lan'
+  option network 'lan'
 
 config include
-	option path '/etc/firewall.user'
+  option path '/etc/firewall.user'
 
 config zone
-	option input 'ACCEPT'
-	option output 'ACCEPT'
-	option forward 'REJECT'
-	option name 'wifi'
-	option network 'wifi'
+  option input 'ACCEPT'
+  option output 'ACCEPT'
+  option forward 'REJECT'
+  option name 'wifi'
+  option network 'wifi'
 
 config forwarding
-	option dest 'lan'
-	option src 'wifi'
+  option dest 'lan'
+  option src 'wifi'
 
 config forwarding
-	option dest 'wifi'
-	option src 'lan'
+  option dest 'wifi'
+  option src 'lan'
 
 config rule
-	option dest_port '53'
-	option name 'DNS'
-	option proto 'tcpudp'
-	option src 'wifi'
-	option target 'ACCEPT'
+  option dest_port '53'
+  option name 'DNS'
+  option proto 'tcpudp'
+  option src 'wifi'
+  option target 'ACCEPT'
 
 config rule
-	option dest_port '67-68'
-	option name 'DHCP'
-	option proto 'udp'
-	option src 'wifi'
-	option src_port '67-68'
-	option target 'ACCEPT'
+  option dest_port '67-68'
+  option name 'DHCP'
+  option proto 'udp'
+  option src 'wifi'
+  option src_port '67-68'
+  option target 'ACCEPT'
