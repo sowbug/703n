@@ -20,6 +20,6 @@ config dhcp 'lan'
   option limit '150'
   option start '101'
 
-config dhcp 'wifi'
-  option interface 'wifi'
+config dhcp 'wan'
+  option interface 'wan'
   option ignore '1'

@@ -19,28 +19,30 @@ config zone
   option input 'ACCEPT'
   option output 'ACCEPT'
   option forward 'REJECT'
-  option name 'wifi'
-  option network 'wifi'
+  option name 'wan'
+  option network 'wan'
+  option masq '1'
+  option masq_dest !192.168.10.0/24
 
 config forwarding
   option dest 'lan'
-  option src 'wifi'
+  option src 'wan'
 
 config forwarding
-  option dest 'wifi'
+  option dest 'wan'
   option src 'lan'
 
 config rule
   option dest_port '53'
   option name 'DNS'
   option proto 'tcpudp'
-  option src 'wifi'
+  option src 'wan'
   option target 'ACCEPT'
 
 config rule
   option dest_port '67-68'
   option name 'DHCP'
   option proto 'udp'
-  option src 'wifi'
+  option src 'wan'
   option src_port '67-68'
   option target 'ACCEPT'
