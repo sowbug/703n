@@ -14,12 +14,12 @@ config dnsmasq
   option rebind_protection '1'
   option resolvfile '/tmp/resolv.conf.auto'
 
-config dhcp 'wifi'
-  option interface 'wifi'
+config dhcp 'lan'
+  option interface 'lan'
   option leasetime '12h'
   option limit '150'
   option start '101'
 
-config dhcp 'wan'
+config dhcp 'wifi'
+  option interface 'wifi'
   option ignore '1'
-  option interface 'wan'
