@@ -1,6 +1,7 @@
-These are a known-good configurations for a TP-Link TL-WR703N flashed
-to OpenWRT "Barrier Breaker" (a copy of which is included here for
-convenience).
+These are known-good configurations for a TP-Link TL-WR703N flashed to
+[OpenWRT](https://openwrt.org/)
+[Barrier Breaker](http://downloads.openwrt.org/barrier_breaker/14.07/),
+a copy of which is included here for convenience.
 
 WAP - Gateway Router
 ===
